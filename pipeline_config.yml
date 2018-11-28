@@ -1,6 +1,7 @@
 #Project Setup
 general:
   productiveBranch: 'master'
+  projectName: 'address-manager'
 
 #Steps Specific Configuration
 steps:
@@ -19,10 +20,10 @@ stages:
     findbugsExcludesFile: '' #Path to findbugs exclude file
     pmdExcludes: '' # List or ANT style patterns
 
-#  integrationTests:
-#    credentials:
-#      - alias: ''
-#        credentialId: ''
+  integrationTests:
+    credentials:
+      - alias: 'MY_ERP'
+        credentialId: ''
 
 #  s4SdkQualityChecks:
 #    jacocoExcludes:
