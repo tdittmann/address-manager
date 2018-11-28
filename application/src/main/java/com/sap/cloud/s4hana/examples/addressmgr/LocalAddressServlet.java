@@ -124,7 +124,7 @@ public class LocalAddressServlet extends HttpServlet {
             entityManager.close();
             response.setStatus(HttpServletResponse.SC_NO_CONTENT);
         } catch (IllegalArgumentException e) {
-            logger.error("Wrong parameters in the HTTP request");
+            logger.error("Wrong parameters in the HTTP request", e);
             response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
         }
     }
