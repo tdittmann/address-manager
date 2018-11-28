@@ -22,8 +22,8 @@ stages:
 
   integrationTests:
     credentials:
-      - alias: 'MY_ERP'
-        credentialId: ''
+      - alias: 'MOCK_SYSTEM'
+        credentialId: 'MOCK_SYSTEM_CREDENTIALS'
 
 #  s4SdkQualityChecks:
 #    jacocoExcludes:
@@ -31,11 +31,11 @@ stages:
 #    nonErpDestinations:
 #      - ''
 
-#  productionDeployment:
-#    cfTargets:
-#      - org: 'org'
-#        space: 'Productive'
-#        apiEndpoint: 'https://'
-#        appName: 'appName'
-#        manifest: 'manifest.yml'
-#        credentialsId: 'credentialsId'
+  productionDeployment:
+    cfTargets:
+      - org: 'P2000934521trial_trial'
+        space: 'dev'
+        apiEndpoint: 'https://api.cf.eu10.hana.ondemand.com'
+        appName: '	address-manager'
+        manifest: 'manifest.yml'
+        credentialsId: 'CF-DEPLOY'
