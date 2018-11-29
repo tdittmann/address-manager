@@ -61,7 +61,7 @@ public class GetSingleBusinessPartnerByIdCommandTest {
     BusinessPartner result = new GetSingleBusinessPartnerByIdCommand(service, "id").execute();
 
     Assert.assertEquals("Alice", result.getFirstName());
-    Assert.assertEquals("MILLER", result.getLastName());
+    Assert.assertEquals("Miller", result.getLastName());
   }
 
 }
