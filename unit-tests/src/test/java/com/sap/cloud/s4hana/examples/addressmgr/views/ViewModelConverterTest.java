@@ -10,6 +10,11 @@ import java.util.List;
 public class ViewModelConverterTest {
 
   @Test
+  public void testConstructor() {
+    ViewModelConverter viewModelConverter = new ViewModelConverter();
+  }
+
+  @Test
   public void convertAddressToAddressView() {
     Address address = new Address(1L, "businessPartner", "München", "Germany", "12", "778866", "Street", "ok");
 
