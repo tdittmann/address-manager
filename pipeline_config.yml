@@ -22,8 +22,8 @@ stages:
 
   integrationTests:
     credentials:
-      - alias: 'MOCK_SYSTEM'
-        credentialId: 'MOCK_SYSTEM_CREDENTIALS'
+      - alias: 'ERP'
+        credentialId: 'ERP_SYSTEM'
 
 #  s4SdkQualityChecks:
 #    jacocoExcludes:
