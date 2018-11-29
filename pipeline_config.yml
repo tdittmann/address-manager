@@ -22,7 +22,7 @@ stages:
 
   integrationTests:
     credentials:
-      - alias: 'ERP'
+      - alias: 'ERP_SYSTEM'
         credentialId: 'ERP_SYSTEM'
 
 #  s4SdkQualityChecks:
