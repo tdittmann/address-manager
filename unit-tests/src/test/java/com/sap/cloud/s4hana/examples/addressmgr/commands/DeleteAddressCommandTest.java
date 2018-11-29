@@ -49,7 +49,7 @@ public class DeleteAddressCommandTest {
 
     Integer result = new DeleteAddressCommand(service, "pbId", "addressId").execute();
 
-    Assert.assertEquals(new Integer(1), result);
+    Assert.assertEquals(new Integer(200), result);
   }
 
 }
