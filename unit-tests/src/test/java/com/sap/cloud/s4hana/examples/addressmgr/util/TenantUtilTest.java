@@ -9,5 +9,8 @@ public class TenantUtilTest {
   public void createSchemaName() {
     String tenant = TenantUtil.createSchemaName("public");
     Assert.assertEquals("public", tenant);
+
+    tenant = TenantUtil.createSchemaName("asdasdasd");
+    Assert.assertEquals("TENANT_asdasdasd", tenant);
   }
 }
