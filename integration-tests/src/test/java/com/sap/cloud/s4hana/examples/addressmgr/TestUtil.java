@@ -13,33 +13,28 @@ import org.jboss.shrinkwrap.api.ShrinkWrap;
 import org.jboss.shrinkwrap.api.asset.ByteArrayAsset;
 import org.jboss.shrinkwrap.api.spec.WebArchive;
 
-public class TestUtil
-{
-    public static WebArchive createDeployment( final Class<?>... classesUnderTest )
-    {
-        return ShrinkWrap
-            .create(WebArchive.class)
-            .addClasses(classesUnderTest)
-            .addClass(RequestContextServletFilter.class)
-            .addClass(TenantRequestContextListener.class)
-            .addClass(UserRequestContextListener.class)
-            .addClass(DestinationsRequestContextListener.class)
-            .addAsManifestResource("arquillian.xml")
-            .addAsWebInfResource(new ByteArrayAsset("<beans/>".getBytes()), ArchivePaths.create("beans.xml"));
-    }
+public class TestUtil {
+	public static WebArchive createDeployment(final Class<?>... classesUnderTest) {
+		return ShrinkWrap
+				.create(WebArchive.class)
+				.addClasses(classesUnderTest)
+				.addClass(RequestContextServletFilter.class)
+				.addClass(TenantRequestContextListener.class)
+				.addClass(UserRequestContextListener.class)
+				.addClass(DestinationsRequestContextListener.class)
+				.addAsManifestResource("arquillian.xml")
+				.addAsWebInfResource(new ByteArrayAsset("<beans/>".getBytes()), ArchivePaths.create("beans.xml"));
+	}
 
-    public static ObjectMapperType objectMapperType()
-    {
-        return ObjectMapperType.JACKSON_2;
-    }
+	public static ObjectMapperType objectMapperType() {
+		return ObjectMapperType.JACKSON_2;
+	}
 
-    public static String toJson( final Object obj )
-    {
-        try {
-            return new ObjectMapper().writeValueAsString(obj);
-        }
-        catch( final JsonProcessingException e ) {
-            throw new ShouldNotHappenException(e);
-        }
-    }
+	public static String toJson(final Object obj) {
+		try {
+			return new ObjectMapper().writeValueAsString(obj);
+		} catch (final JsonProcessingException e) {
+			throw new ShouldNotHappenException(e);
+		}
+	}
 }
