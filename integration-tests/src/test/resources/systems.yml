@@ -1,6 +1,6 @@
 ---
 erp:
-  default: "MOCK_SYSTEM"
+  default: "ERP_SYSTEM"
   systems:
     - alias: "ERP_SYSTEM"
       uri: "https://bupa-mock-odata-jungly-inescutcheon.cfapps.eu10.hana.ondemand.com"
