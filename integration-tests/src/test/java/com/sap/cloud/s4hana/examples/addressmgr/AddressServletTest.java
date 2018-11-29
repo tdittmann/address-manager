@@ -140,6 +140,6 @@ public class AddressServletTest
     }
 
     private BusinessPartnerAddress getAddress(final String bupaId, final String addressId) {
-        return new GetAddressCommand(bupaId, addressId).execute();
+        return new GetAddressMockCommand(bupaId, addressId).execute();
     }
 }

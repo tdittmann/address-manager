@@ -6,15 +6,15 @@ import com.sap.cloud.sdk.odatav2.connectivity.ODataException;
 import com.sap.cloud.sdk.s4hana.datamodel.odata.namespaces.businesspartner.BusinessPartnerAddress;
 import com.sap.cloud.sdk.s4hana.datamodel.odata.services.DefaultBusinessPartnerService;
 
-public class GetAddressCommand extends HystrixCommand<BusinessPartnerAddress> {
+public class GetAddressMockCommand extends HystrixCommand<BusinessPartnerAddress> {
 
 	private String bupaId;
 	private String addressId;
 
-	public GetAddressCommand(final String bupaId, final String addressId) {
+	public GetAddressMockCommand(final String bupaId, final String addressId) {
 		super(HystrixUtil
 				.getDefaultErpCommandSetter(
-						GetAddressCommand.class,
+						GetAddressMockCommand.class,
 						HystrixUtil.getDefaultErpCommandProperties()
 								.withExecutionTimeoutInMilliseconds(10000)));
 		this.bupaId = bupaId;
